@@ -5,13 +5,13 @@
 
 Term: Spring 2019
 
-+ Team ##
++ Team # 4
 + Team members
-	+ team member 1
-	+ team member 2
-	+ team member 3
-	+ team member 4
-	+ team member 5
+	+ Shiwei Hua
+	+ Charlie Chen
+	+ Jingyue Li
+	+ Xuewei Li
+	+ Shaofu Wang
 
 + Project summary: In this project, we created a classification engine for enhance the resolution of images. 
 	
