@@ -33,7 +33,7 @@ feature <- function(LR_dir, HR_dir, n_points=1000){
     temp[2:(nrow(imgLR)+1),2:(ncol(imgLR)+1),]= imgLR
     for (j in 1:n_points) {
       featMat[(i-1)*n_points+j,,] = matrix(temp[x_sam[j]:(x_sam[j]+2),y_sam[j]:(y_sam[j]+2),],9,3)[-5,]
-      labMat[j,,] = matrix(imgHR[(2*x_sam[j]-1):(2*x_sam[j]),(2*y_sam[j]-1):(2*y_sam[j]),],4,3)
+      labMat[(i-1)*n_points+j,,] = matrix(imgHR[(2*x_sam[j]-1):(2*x_sam[j]),(2*y_sam[j]-1):(2*y_sam[j]),],4,3)
       }
   }
   return(list(feature = featMat, label = labMat))
