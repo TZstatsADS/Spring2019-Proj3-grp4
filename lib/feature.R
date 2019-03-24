@@ -5,7 +5,7 @@
 ### Authors: Chengliang Tang/Tian Zheng
 ### Project 3
 
-feature <- function(LR_dir, HR_dir, n_points=10){
+feature <- function(LR_dir, HR_dir, n_points=1000){
   
   ### Construct process features for training images (LR/HR pairs)
   
@@ -28,7 +28,7 @@ feature <- function(LR_dir, HR_dir, n_points=10){
     return(matrix(imgHR[(2*c[1]-1):(2*c[1]),(2*c[2]-1):(2*c[2]),],4,3))
   }
   ### read LR/HR image pairs
-  for(i in 1:2){
+  for(i in 1:n_files){
     imgLR <- readImage(paste0(LR_dir,  "img_", sprintf("%04d", i), ".jpg"))
     imgHR <- readImage(paste0(HR_dir,  "img_", sprintf("%04d", i), ".jpg"))
     ### step 1. sample n_points from imgLR
