@@ -5,7 +5,7 @@
 ### Authors: Chengliang Tang/Tian Zheng
 ### Project 3
 
-feature <- function(LR_dir, HR_dir, n_points=1000){
+feature <- function(LR_dir, HR_dir, n_points=10){
   
   ### Construct process features for training images (LR/HR pairs)
   
@@ -28,7 +28,7 @@ feature <- function(LR_dir, HR_dir, n_points=1000){
     return(matrix(imgHR[(2*c[1]-1):(2*c[1]),(2*c[2]-1):(2*c[2]),],4,3))
   }
   ### read LR/HR image pairs
-  for(i in 1:n_files){
+  for(i in 1:2){
     imgLR <- readImage(paste0(LR_dir,  "img_", sprintf("%04d", i), ".jpg"))
     imgHR <- readImage(paste0(HR_dir,  "img_", sprintf("%04d", i), ".jpg"))
     ### step 1. sample n_points from imgLR
@@ -39,9 +39,9 @@ feature <- function(LR_dir, HR_dir, n_points=1000){
     temp = array(0, c(dim(imgLR))+c(2,2,0))
     temp[2:(nrow(imgLR)+1),2:(ncol(imgLR)+1),]= imgLR
     t1 = apply(sam,1,f1)
-    featMat[((i-1)*n_points+1):(i*n_points),,] = aperm(array(t,c(8,3,n_points)),c(3,1,2))
+    featMat[((i-1)*n_points+1):(i*n_points),,] = aperm(array(t1,c(8,3,n_points)),c(3,1,2))
     t2 = apply(sam,1,f2)
-    labMat[((i-1)*n_points+1):(i*n_points),,] = aperm(array(t,c(4,3,n_points)),c(3,1,2))
+    labMat[((i-1)*n_points+1):(i*n_points),,] = aperm(array(t2,c(4,3,n_points)),c(3,1,2))
   }  
   return(list(feature = featMat, label = labMat))
 }
