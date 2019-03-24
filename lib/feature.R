@@ -21,21 +21,28 @@ feature <- function(LR_dir, HR_dir, n_points=1000){
   featMat <- array(NA, c(n_files * n_points, 8, 3))
   labMat <- array(NA, c(n_files * n_points, 4, 3))
   
+  f1 = function(c){
+    return(matrix(temp[c[1]:(c[1]+2),c[2]:(c[2]+2),],9,3)[-5,])
+  }
+  f2 = function(c){
+    return(matrix(imgHR[(2*c[1]-1):(2*c[1]),(2*c[2]-1):(2*c[2]),],4,3))
+  }
   ### read LR/HR image pairs
   for(i in 1:n_files){
     imgLR <- readImage(paste0(LR_dir,  "img_", sprintf("%04d", i), ".jpg"))
     imgHR <- readImage(paste0(HR_dir,  "img_", sprintf("%04d", i), ".jpg"))
     ### step 1. sample n_points from imgLR
-    x_sam <- sample(1:nrow(imgLR), n_points, replace = T)
-    y_sam <- sample(1:ncol(imgLR), n_points, replace = T)
+    sam = matrix(0,nrow = n_points, ncol = 2)
+    sam[,1] <- sample(1:nrow(imgLR), n_points, replace = T)
+    sam[,2] <- sample(1:ncol(imgLR), n_points, replace = T)
     ### step 2. for each sampled point in imgLR,
     temp = array(0, c(dim(imgLR))+c(2,2,0))
     temp[2:(nrow(imgLR)+1),2:(ncol(imgLR)+1),]= imgLR
-    for (j in 1:n_points) {
-      featMat[(i-1)*n_points+j,,] = matrix(temp[x_sam[j]:(x_sam[j]+2),y_sam[j]:(y_sam[j]+2),],9,3)[-5,]
-      labMat[(i-1)*n_points+j,,] = matrix(imgHR[(2*x_sam[j]-1):(2*x_sam[j]),(2*y_sam[j]-1):(2*y_sam[j]),],4,3)
-      }
-  }
+    t1 = apply(sam,1,f1)
+    featMat[((i-1)*n_points+1):(i*n_points),,] = aperm(array(t,c(8,3,n_points)),c(3,1,2))
+    t2 = apply(sam,1,f2)
+    labMat[((i-1)*n_points+1):(i*n_points),,] = aperm(array(t,c(4,3,n_points)),c(3,1,2))
+  }  
   return(list(feature = featMat, label = labMat))
 }
 
