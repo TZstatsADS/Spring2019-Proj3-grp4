@@ -30,7 +30,7 @@ Term: Spring 2019
 
 ![image](figs/example3.png)
 	
-**Contribution statement**: (doc/a_note_on_contributions.md)) All team members contributed equally in all stages of this project. All team members approve our work presented in this GitHub repository including this contributions statement. 
+**Contribution statement**: (doc/a_note_on_contributions.md) All team members contributed in all stages of this project. All team members approve our work presented in this GitHub repository including this contributions statement. 
 
 1. Shiwei Hua:Developed the feature and Random Forest, Compared the results for each model. Edit Readme and Prepared for Presentation.
 2. Xuewei Li: Developed the feature, tried CNN model, improved Xgboost model, tested results for each model, and Edit Google Form.
