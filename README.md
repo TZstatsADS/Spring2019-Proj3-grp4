@@ -17,9 +17,9 @@ Term: Spring 2019
 
 + Model used:
 
-Baseline: GBM(depth = 3, ntree = 200); MSE = 0.003464; PSNR = 24.405.
-Improvement: XGBoost(Depth = 4, Nthread = 2, eta = 0.5, silent=1); MSE = 0.002600096; PSNR = 24.40873.
-Other try: Random Forest and CNN
+1.  Baseline: GBM(depth = 3, ntree = 200); MSE = 0.003464; PSNR = 24.405.
+2.  Improvement: XGBoost(Depth = 4, Nthread = 2, eta = 0.5, silent=1); MSE = 0.002600096; PSNR = 24.40873.
+3.  Other try: Random Forest and CNN
 
 + Evaluation on
 1.  Computational Efficiency - Running time on feature extraction and model training
