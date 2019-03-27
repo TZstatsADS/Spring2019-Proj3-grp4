@@ -13,7 +13,7 @@ Term: Spring 2019
 	+ Xuewei Li
 	+ Shaofu Wang
 
-+ Project summary: In this project, we created a classification engine for enhance the resolution of images. We implemented a baseline Gradient Boosting Model and some of the improvements such as XGBoost, Random Forest, BAYESTREE and Convolutional Neural Network (CNN). Finally, we choose XGBoost with parameters (Depth = 4, Nthread = 2, eta = 0.5, silent=1) as our final model
++ Project summary: In this project, we created a classification engine for enhance the resolution of images. We implemented a baseline Gradient Boosting Model and some of the improvements such as XGBoost, Random Forest, Bayes Tree and Convolutional Neural Network (CNN). Finally, we choose XGBoost with parameters (Depth = 4, Nthread = 2, eta = 0.5, silent=1) as our final model
 
 + Feature extracted: Feature is the piece of information that describes a part of image or whole image. It is a form of dimensionality reduction. Here we sample 1000 pixels from each LR image. Then we extract 8 pixels around and 4 corresponding pixels to each sampled pixel in HR image. Thus we generate total 1500\*1000\*8 features from each color (RGB) in our 1500 LR images and 1500\*1000\*4 features from each color our 1500 HR images. 
 
@@ -30,13 +30,13 @@ Term: Spring 2019
 
 ![image](figs/example3.png)
 	
-**Contribution statement**: ([default](doc/a_note_on_contributions.md)) All team members contributed equally in all stages of this project. All team members approve our work presented in this GitHub repository including this contributions statement. 
+**Contribution statement**: (doc/a_note_on_contributions.md)) All team members contributed equally in all stages of this project. All team members approve our work presented in this GitHub repository including this contributions statement. 
 
-Shiwei Hua
-Charlie Chen
-Jingyue Li
-Xuewei Li
-Shaofu Wang
++Shiwei Hua:Developed the feature and Random Forest, Compared the results for each model. Edit Readme and Prepared for Presentation.
++Xuewei Li: Developed the feature, tried CNN model, improved Xgboost model, tested results for each model.
++Charlie Chen: Improved the Feature, and developed super-resolution and Gradient Boosting Machine.
++Jingyue Li: Tried Bayes Tree model.
++Shaofu Wang: Provided and interpreted of Xgboost model.
 
 Following [suggestions](http://nicercode.github.io/blog/2013-04-05-projects/) by [RICH FITZJOHN](http://nicercode.github.io/about/#Team) (@richfitz). This folder is orgarnized as follows.
 
