@@ -13,7 +13,18 @@ Term: Spring 2019
 	+ Xuewei Li
 	+ Shaofu Wang
 
-+ Project summary: In this project, we created a classification engine for enhance the resolution of images. 
++ Project summary: In this project, we created a classification engine for enhance the resolution of images. We implemented a baseline Gradient Boosting Model and some of the improvements such as XGBoost, Random Forest and Convolutional Neural Network (CNN). Finally, we choose XGBoost with parameters (Depth = 4, Nthread = 2, eta = 0.5, silent=1) as our final model
+
++ Model used:
+
+Baseline: GBM(depth = 3, ntree = 200); MSE = 0.003464; PSNR = 24.405.
+Improvement: XGBoost(Depth = 4, Nthread = 2, eta = 0.5, silent=1); MSE = 0.002600096; PSNR = 24.40873.
+Other try: Random Forest and CNN
+
++ Evaluation on
+1.  Computational Efficiency - Running time on feature extraction and model training
+2.  Computational Efficiency - Running time on test data 
+3.  Predictive Power - Error rate (PSNR)
 	
 **Contribution statement**: ([default](doc/a_note_on_contributions.md)) All team members contributed equally in all stages of this project. All team members approve our work presented in this GitHub repository including this contributions statement. 
 
