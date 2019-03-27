@@ -32,11 +32,11 @@ Term: Spring 2019
 	
 **Contribution statement**: (doc/a_note_on_contributions.md)) All team members contributed equally in all stages of this project. All team members approve our work presented in this GitHub repository including this contributions statement. 
 
-+Shiwei Hua:Developed the feature and Random Forest, Compared the results for each model. Edit Readme and Prepared for Presentation.
-+Xuewei Li: Developed the feature, tried CNN model, improved Xgboost model, tested results for each model.
-+Charlie Chen: Improved the Feature, and developed super-resolution and Gradient Boosting Machine.
-+Jingyue Li: Tried Bayes Tree model.
-+Shaofu Wang: Provided and interpreted of Xgboost model.
+1. Shiwei Hua:Developed the feature and Random Forest, Compared the results for each model. Edit Readme and Prepared for Presentation.
+2. Xuewei Li: Developed the feature, tried CNN model, improved Xgboost model, tested results for each model, and Edit Google Form.
+3. Charlie Chen: Improved the Feature; Developed super-resolution and Gradient Boosting Machine.
+4. Jingyue Li: Tried Bayes Tree model.
+5. Shaofu Wang: Provided and interpreted of Xgboost model.
 
 Following [suggestions](http://nicercode.github.io/blog/2013-04-05-projects/) by [RICH FITZJOHN](http://nicercode.github.io/about/#Team) (@richfitz). This folder is orgarnized as follows.
 
