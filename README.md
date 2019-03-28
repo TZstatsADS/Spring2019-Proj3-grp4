@@ -38,6 +38,8 @@ Term: Spring 2019
 4. Jingyue Li: Studied and tried Bayes Tree model.
 5. Shaofu Wang: Provided and interpreted of Xgboost model.
 
+(Names listed in no particular order)
+
 Following [suggestions](http://nicercode.github.io/blog/2013-04-05-projects/) by [RICH FITZJOHN](http://nicercode.github.io/about/#Team) (@richfitz). This folder is orgarnized as follows.
 
 ```
