@@ -35,7 +35,7 @@ Term: Spring 2019
 1. Shiwei Hua:Developed the feature and Random Forest, Compared the results for each model. Edit Readme and Prepared for Presentation.
 2. Xuewei Li: Developed the feature, tried CNN model, improved Xgboost model, tested results for each model, and Edit Google Form.
 3. Charlie Chen: Improved the Feature; Developed super-resolution and Gradient Boosting Machine.
-4. Jingyue Li: Tried Bayes Tree model.
+4. Jingyue Li: Studied and tried Bayes Tree model.
 5. Shaofu Wang: Provided and interpreted of Xgboost model.
 
 Following [suggestions](http://nicercode.github.io/blog/2013-04-05-projects/) by [RICH FITZJOHN](http://nicercode.github.io/about/#Team) (@richfitz). This folder is orgarnized as follows.
